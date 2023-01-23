@@ -2,7 +2,6 @@
   "name": "202301-w3ch1-alex-navarro",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo",
