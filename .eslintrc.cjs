@@ -6,14 +6,22 @@ module.exports = {
   extends: ["xo", "prettier"],
   overrides: [
     {
-      extends: ["xo-typescript"],
+      extends: ["xo-typescript", "prettier"],
       files: ["*.ts", "*.tsx"],
+      rules: {
+        "@typescript-eslint/consistent-type-definitions": [
+          "error",
+          "interface",
+        ],
+      },
     },
   ],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    rules: { "@typescript-eslint/consistent-type-definitions": "type" },
   },
-  rules: {},
+  rules: {
+    quotes: "off",
+    "@typescript-eslint/quotes": "warn",
+  },
 };
