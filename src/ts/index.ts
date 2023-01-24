@@ -1,8 +1,10 @@
-import { type CharacterDataStructure } from "./characters/Character/CharacterDataStructure";
-import { King } from "./characters/King/King";
-import { Fighter } from "./characters/Fighter/Fighter";
-import { Advisor } from "./characters/Advisor/Advisor";
-import { Squire } from "./characters/Squire/Squire";
+import { type CharacterDataStructure } from "./components/characters/Character/CharacterDataStructure";
+import { King } from "./components/characters/King/King";
+import { Fighter } from "./components/characters/Fighter/Fighter";
+import { Advisor } from "./components/characters/Advisor/Advisor";
+import { Squire } from "./components/characters/Squire/Squire";
+import { Character } from "./components/characters/Character/Character";
+import ComponentCard from "./components/ComponentCard/ComponentCard";
 
 const joffreyData: CharacterDataStructure = {
   name: "Joffrey",
@@ -46,3 +48,10 @@ export const tyrion = new Advisor(tyrionData, daenerys);
 export const bronn = new Squire(bronnData, 0, jaime);
 
 export const characters = [jaime, joffrey, daenerys, tyrion, bronn];
+
+const app = document.querySelector(".app")!;
+const newCard = new ComponentCard(
+  app,
+  "ul",
+  "characters-list row list-unstyled"
+);
