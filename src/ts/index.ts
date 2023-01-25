@@ -4,7 +4,7 @@ import { Fighter } from "./components/characters/Fighter/Fighter";
 import { Advisor } from "./components/characters/Advisor/Advisor";
 import { Squire } from "./components/characters/Squire/Squire";
 import { Character } from "./components/characters/Character/Character";
-import ComponentCard from "./components/ComponentCard/ComponentCard";
+import CharacterCard from "./components/CharacterCard/CharacterCard";
 
 const joffreyData: CharacterDataStructure = {
   name: "Joffrey",
@@ -49,9 +49,5 @@ export const bronn = new Squire(bronnData, 0, jaime);
 
 export const characters = [jaime, joffrey, daenerys, tyrion, bronn];
 
-const app = document.querySelector(".app")!;
-const newCard = new ComponentCard(
-  app,
-  "ul",
-  "characters-list row list-unstyled"
-);
+const app = new CharacterCard("Hola Victor");
+const app2 = new CharacterCard("Hola Diego");
